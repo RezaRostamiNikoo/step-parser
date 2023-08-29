@@ -1,0 +1,35 @@
+{
+    "include": [
+        "./src/**/*.ts",
+        "src/utils"
+    ],
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "allowJs": true,
+        "declaration": true,
+        "declarationDir": "dist/typings",
+        "declarationMap": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "paths": {
+            "@utils/*": [
+                "./src/utils/*"
+            ],
+            "@utils": [
+                "./src/utils"
+            ],
+            "@errors/*": [
+                "./src/errors/*"
+            ],
+            "@errors": [
+                "./src/errors"
+            ],
+            "@nodes": [
+                "./src/nodes"
+            ],
+            "@nodes/*": [
+                "./src/nodes/*"
+            ]
+        }
+    }
+}
