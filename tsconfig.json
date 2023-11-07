@@ -26,10 +26,10 @@
                 "./src/errors"
             ],
             "@nodes": [
-                "src/spf"
+                "src/nodes"
             ],
             "@nodes/*": [
-                "src/spf/*"
+                "src/nodes/*"
             ]
         }
     }
