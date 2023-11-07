@@ -10,7 +10,7 @@ export function parseIndex(state: State): ExpressionNode {
         state.goAHead();
         if (state.isToken('=')) {
             state.goAHead()
-            return new DefinitionNode(new IndexNode(index), parseClass(state));
+            return new DefinitionNode(new IndexNode(index), parseClass(state) as ClassNode);
         }
         else return new IndexNode(index)
     }

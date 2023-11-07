@@ -72,11 +72,11 @@ export class Parser {
         return result;
     }
 
-
+dd
 
     parse(): IFCModel {
         const header: Array<ExpressionNode> = [];
-        const data: Map<string, ExpressionNode> = new Map();
+        const data: Map<string, DefinitionNode> = new Map();
         const rawData = this.splitlines();
 
         rawData.data.forEach(l => {

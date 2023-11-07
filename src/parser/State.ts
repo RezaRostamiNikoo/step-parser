@@ -3,8 +3,7 @@ import { Scope } from "./Scope";
 import { Expression } from "./Expression";
 import { Token } from "./Token";
 import { TokenType } from "./types";
-import { Queue } from "@utils/Queue";
-import { Stack } from "@utils/Stack";
+import { Stack, Queue } from 'predefined-ds';
 
 export class State {
     private scope: Scope;
@@ -78,7 +77,7 @@ export class State {
      * @returns {State} return the main state
      */
     goAHead(): State { this._deletedTokens.push(this.getTokens().dequeue()); return this; }
-    rewind(): State { this.getTokens().enqueueAtFirst(this._deletedTokens.pop()); return this }
+    rewind(): State { this.getTokens().cutTheLine(this._deletedTokens.pop()); return this }
 
     /**
      * It checks if current token is equal to the given chars or not.
