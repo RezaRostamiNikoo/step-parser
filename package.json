@@ -2,7 +2,12 @@
   "name": "spf-parser",
   "version": "1.0.0",
   "description": "",
-  "main": "parser.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "./dist/index.js",
+    "./dist/index.d.ts"
+  ],
   "scripts": {
     "test": "jest"
   },
@@ -19,6 +24,7 @@
     "ts-loader": "^9.4.4",
     "typescript": "^5.1.6",
     "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "dts-bundle": "^0.7.3"
   }
 }

@@ -7,10 +7,10 @@
         "esModuleInterop": true,
         "allowJs": true,
         "declaration": true,
-        "declarationDir": "dist/typings",
+        "declarationDir": "dist/types",
         "declarationMap": true,
         "outDir": "dist",
-        "baseUrl": ".",
+        "forceConsistentCasingInFileNames": true,
         "paths": {
             "@utils/*": [
                 "./src/utils/*"

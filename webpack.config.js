@@ -1,4 +1,7 @@
 const path = require("path");
+const package = require('./package.json')
+
+const libraryName = package.name
 
 
 /** @type {import("webpack").Configuration} */
@@ -17,9 +20,9 @@ module.exports = {
         filename: "index.js",
         library: {
             name: {
-                root: "step-parser",
-                amd: "step-parser",
-                commonjs: "step-parser",
+                root: libraryName,
+                amd: libraryName,
+                commonjs: libraryName,
             },
             type: "umd",
         },
@@ -34,5 +37,21 @@ module.exports = {
                 loader: "ts-loader"
             }
         ]
-    }
+    },
+    plugins: [
+        function () {
+            this.hooks.done.tap({
+                name: "dts-bundler"
+            }, stats => {
+                const dts = require('dts-bundle')
+                dts.bundle({
+                    name: libraryName,
+                    main: './dist/types/index.d.ts',
+                    out: "../index.d.ts",
+                    removeSource: true,
+                    outputAsModuleFolder: true
+                })
+            })
+        }
+    ]
 }
