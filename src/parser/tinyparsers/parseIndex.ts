@@ -1,4 +1,4 @@
-import { ExpressionNode } from "@nodes";
+import { ClassNode, ExpressionNode } from "@nodes";
 import { State } from "../State";
 import { parseClass } from "./parseClass";
 import { DefinitionNode } from "@nodes/DefinitionNode";
