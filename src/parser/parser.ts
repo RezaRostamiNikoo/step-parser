@@ -1,10 +1,9 @@
 
 
-import { ExpressionNode } from "@nodes";
+import { ExpressionNode, DefinitionNode } from "@nodes";
 import { State } from "./State";
 import { parseIndex } from "./tinyparsers/parseIndex";
 import { IFCModel } from "../IFCModel";
-import { DefinitionNode } from "@nodes/DefinitionNode";
 
 function removeComments(text: string): Array<string> {
     let tt = text.replace(/;[\r|\n]/gs, ';;;');
