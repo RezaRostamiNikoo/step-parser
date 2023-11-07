@@ -1,5 +1,3 @@
-import { State } from "src/parser/State";
-
 export * from "./EmptyExpressionError";
 export * from "./ExpressionRuntimeError";
 export * from "./ExpressionSyntaxError";

@@ -66,7 +66,7 @@ export class Parser {
             if (shouldBeAdded && isDoingData) result.data.push(line.trim());
             else if (shouldBeAdded && isDoingHeader) {
                 result.header.push(line.trim());
-                console.log(line.trim())
+                // console.log(line.trim())
             }
         });
         return result;
