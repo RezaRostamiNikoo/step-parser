@@ -1,0 +1,44 @@
+ISO-10303-21;
+HEADER;
+
+/******************************************************************************************
+* STEP Physical File produced by: The EXPRESS Data Manager Version 5.02.0100.07 : 28 Aug 2013
+* Module:                         EDMstepFileFactory/EDMstandAlone
+* Creation date:                  Thu Aug 03 11:36:51 2023
+* Host:                           NRC-053497
+* Database:                       C:\Users\jalaeif\AppData\Local\Temp\361c5ad2-17c3-4cd6-b688-ce197dea7f67\940c79f1-634c-4c66-a968-2f498ece0624\ifc
+* Database version:               5507
+* Database creation date:         Thu Aug 03 11:36:37 2023
+* Schema:                         IFC4
+* Model:                          DataRepository.ifc
+* Model creation date:            Thu Aug 03 11:36:38 2023
+* Header model:                   DataRepository.ifc_HeaderModel
+* Header model creation date:     Thu Aug 03 11:36:38 2023
+* EDMuser:                        sdai-user
+* EDMgroup:                       sdai-group
+* License ID and type:            5605 : Permanent license. Expiry date: 
+* EDMstepFileFactory options:     020000
+******************************************************************************************/
+FILE_DESCRIPTION(('ViewDefinition [DesignTransferView_V1.0]'),'2;1');
+FILE_NAME('0001','2023-08-03T11:36:51',(''),(''),'The EXPRESS Data Manager Version 5.02.0100.07 : 28 Aug 2013','22.0.2.392 - Exporter 22.0.2.392 - Alternate UI 22.0.2.392','');
+FILE_SCHEMA(('IFC4'));
+ENDSEC;
+
+DATA;
+#1= IFCORGANIZATION($,'Autodesk Revit 2022 (ENU)',$,$,$);
+#5= IFCAPPLICATION(#1,'2022','Autodesk Revit 2022 (ENU)','Revit');
+#6= IFCCARTESIANPOINT((0.,0.,0.));
+#10= IFCCARTESIANPOINT((0.,0.));
+#12= IFCDIRECTION ((1.,0.,0.));
+#14= IFCDIRECTION((-1.,0.,0.));
+#16= IFCDIRECTION((0.,1.,0.));
+#18= IFCDIRECTION((0.,-1.,0.));
+#20= IFCDIRECTION((0.,0.,1.));
+#22= IFCDIRECTION((0.,0.,-1.));
+#24= IFCDIRECTION((1.,0.));
+#26= IFCDIRECTION((-1.,0.));
+#28= IFCDIRECTION((0.,1.));
+#30= IFCDIRECTION((0.,-1.));
+ENDSEC;
+
+END-ISO-10303-21;

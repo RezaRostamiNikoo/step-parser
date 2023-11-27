@@ -14,7 +14,7 @@ export function parseEnum(state: State): ExpressionNode {
     if (state.isType("ENUM")) {
         strVal = state.token.Value;
         state.goAHead();
-        if (strVal === ".TRUE." || strVal === ".FALSE.") return new BooleanNode(strVal);
+        if ([".TRUE.", ".FALSE.", ".T.", ".F."].includes(strVal)) return new BooleanNode(strVal);
         return new EnumNode(strVal);
     }
     return parseNumber(state);

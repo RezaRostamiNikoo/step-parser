@@ -3,7 +3,7 @@
 import { ExpressionNode, DefinitionNode } from "@nodes";
 import { State } from "./State";
 import { parseIndex } from "./tinyparsers/parseIndex";
-import { IFCModel } from "../IFCModel";
+import { IfcModel } from '../objects/IfcModel';
 
 function removeComments(text: string): Array<string> {
     let tt = text.replace(/;[\r|\n]/gs, ';;;');
@@ -71,26 +71,24 @@ export class Parser {
         return result;
     }
 
-dd
+    parse(): IfcModel {
 
-    parse(): IFCModel {
-        const header: Array<ExpressionNode> = [];
-        const data: Map<string, DefinitionNode> = new Map();
+        const result = new IfcModel()
+
         const rawData = this.splitlines();
 
         rawData.data.forEach(l => {
             const parser = new LineParser(l);
             const node: DefinitionNode = parser.parse() as DefinitionNode;
-            if (node.Type === "DefinitionNode") {
-                data.set(node.Index.toString(), node);
-            }
+            if (node.Type === "DefinitionNode")
+                result.addDefinition(node.Index.toString(), node)
         });
 
         rawData.header.forEach(l => {
             const parser = new LineParser(l);
-            const node = parser.parse();
-            header.push(node);
+            result.addHeaderMetadata(parser.parse())
         });
-        return new IFCModel(header, data);
+
+        return result
     }
 }
